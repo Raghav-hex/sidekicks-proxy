@@ -183,7 +183,7 @@ async def sidekick_galactus(params: SidekickInput) -> str:
         async with httpx.AsyncClient(timeout=60) as client:
             r = await client.post(
                 "https://integrate.api.nvidia.com/v1/chat/completions",
-                json={"model": "deepseek-ai/deepseek-v3-0324",
+                json={"model": "deepseek-ai/deepseek-v3_1",
                       "messages": [{"role": "user", "content": params.prompt}],
                       "temperature": params.temperature,
                       "max_tokens": params.max_tokens,
